@@ -4,6 +4,7 @@ import { createPropertyAction } from "@/utils/actions";
 import { SubmitButton } from "@/components/form/Buttons";
 import PriceInput from "@/components/form/PriceInput";
 import CategoriesInput from "@/components/form/CategoriesInput";
+import TextAreaInput from "@/components/form/TextAreaInput";
 
 function CreatePropertyPage() {
   return (
@@ -27,11 +28,13 @@ function CreatePropertyPage() {
               label="Tagline (30 limit)"
               defaultValue="Dream Getaway Awaits You Here"
             />
-            {/* {prince} */}
             <PriceInput />
-            {/* categories */}
             <CategoriesInput />
           </div>
+          <TextAreaInput
+            name="description"
+            labelText="Description (10 - 1000 Words)"
+          />
           {/* text area / description */}
           <SubmitButton text="create rental" className="mt-12" />
         </FormContainer>
