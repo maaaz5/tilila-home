@@ -176,23 +176,19 @@ export const fetchProperties = async ({
     where: {
       category,
       OR: [
-        {
-          name: { contains: search, mode: "insensitive" },
-          tagline: { contains: search, mode: "insensitive" },
-        },
+        { name: { contains: search, mode: "insensitive" } },
+        { tagline: { contains: search, mode: "insensitive" } },
       ],
     },
     select: {
       id: true,
       name: true,
-      image: true,
       tagline: true,
       country: true,
+      image: true,
       price: true,
     },
-    orderBy: {
-      createdAt: "desc",
-    },
+    orderBy: { createdAt: "desc" },
   });
   return properties;
 };
