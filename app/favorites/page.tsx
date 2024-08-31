@@ -1,7 +1,6 @@
 import EmptyList from "@/components/home/EmptyList";
 import PropertiesList from "@/components/home/PropertiesList";
 import { fetchFavorites } from "@/utils/actions";
-import React from "react";
 
 async function FavoritesPage() {
   const favorites = await fetchFavorites();
