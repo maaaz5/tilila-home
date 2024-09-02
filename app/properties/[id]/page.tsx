@@ -5,7 +5,6 @@ import { redirect } from "next/navigation";
 import ShareButton from "../../../components/properties/ShareButton";
 import ImageContainer from "@/components/properties/ImageContainer";
 import PropertyRating from "@/components/card/PropertyRating";
-import BookingCalendar from "@/components/properties/BookingCalendar";
 import PropertyDetails from "@/components/properties/PropertyDetails";
 import UserInfo from "@/components/properties/UserInfo";
 import { Separator } from "@/components/ui/separator";
@@ -65,7 +64,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         </div>
         <div className="lg:col-span-4 flex flex-col items-center">
           {/* calendar */}
-          <BookingCalendar />
         </div>
       </section>
       {ReviewDoesNotExist && <SubmitReview propertyId={property.id} />}
